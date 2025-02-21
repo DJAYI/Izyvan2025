@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { CanActivateFn } from '@angular/router';
 
-import { syncSessionGuard } from './sync-session.guard';
+import { SyncSessionGuard } from './sync-session.guard';
 
-describe('syncSessionGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => syncSessionGuard(...guardParameters));
+describe('SyncSessionGuard', () => {
+  const executeGuard: CanActivateFn = (...guardParameters) =>
+    TestBed.runInInjectionContext(() => SyncSessionGuard(...guardParameters));
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

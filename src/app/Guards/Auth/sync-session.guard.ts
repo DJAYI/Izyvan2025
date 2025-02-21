@@ -1,5 +1,18 @@
-import { CanActivateFn } from '@angular/router';
+import { CanActivateFn, Router } from '@angular/router';
+import { SessionService } from '../../Services/Auth/session.service';
+import { Inject } from '@angular/core';
 
-export const syncSessionGuard: CanActivateFn = (route, state) => {
-  return true;
+export const SyncSessionGuard: CanActivateFn = (route, state) => {
+  const session: SessionService = Inject(SessionService);
+
+  const router = new Router();
+
+  const userSession = session.sessionStatus;
+
+  if (userSession) {
+    return true;
+  } else {
+    router.navigate(['/login']);
+    return false;
+  }
 };
