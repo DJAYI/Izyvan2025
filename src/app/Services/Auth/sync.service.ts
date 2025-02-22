@@ -9,7 +9,7 @@ import { Credentials } from '../../models/auth/Credentials';
 export class SyncService {
   endpoint = environment.apiUrL + '/sync';
 
-  constructor(private http: HttpClient) {}
+  constructor(public http: HttpClient) {}
 
   syncSession(credentials: Credentials) {
     return this.http.post(this.endpoint, credentials);

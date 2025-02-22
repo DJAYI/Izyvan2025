@@ -29,7 +29,7 @@ export class LoginFormComponent {
   });
 
   constructor(
-    protected syncService: SyncService,
+    public syncService: SyncService,
     protected session: SessionService
   ) {
     this.username.setValidators([
@@ -46,7 +46,7 @@ export class LoginFormComponent {
     ]);
   }
 
-  protected onSubmit(): void {
+  public onSubmit(): void {
     const { username, password } = this.loginGroup.value;
     const credentials: Credentials = { username, password };
 
