@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { User } from '../../models/User';
 import { Router } from '@angular/router';
 
@@ -6,9 +6,10 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class SessionService {
-  private router: Router = Inject(Router);
   public sessionStatus: boolean = false;
   public sessionRole = '';
+
+  private router = inject(Router);
 
   constructor() {}
 
@@ -17,6 +18,11 @@ export class SessionService {
       this.sessionStatus = true;
       this.sessionRole = user.role;
       this.router.navigate(['/dashboard']);
+    }
+
+    if (!user) {
+      this.router.navigate(['/login']);
+      console.log('Login failed');
     }
   }
 }

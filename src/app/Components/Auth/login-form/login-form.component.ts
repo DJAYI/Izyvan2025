@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -19,7 +19,7 @@ import { User } from '../../../models/User';
   styleUrl: './login-form.component.css',
 })
 export class LoginFormComponent {
-  router: Router = Inject(Router);
+  router: Router = inject(Router);
   username: FormControl = new FormControl('');
   password: FormControl = new FormControl('');
 
@@ -77,24 +77,6 @@ export class LoginFormComponent {
         },
         error: (error) => {
           console.error(error);
-
-          const userDetails: User = {
-            firstname: 'John',
-            lastname: 'Doe',
-            email: 'email@example.com',
-            role: 'admin',
-            docType: 'ID',
-            docNumber: '123456',
-            phone: '1234567890',
-            address: {
-              street: '123 Main St',
-              city: 'Anytown',
-              state: 'NY',
-              zip: '12345',
-            },
-          };
-
-          this.session.setUserSession(userDetails);
         },
       });
     }
