@@ -77,6 +77,25 @@ export class LoginFormComponent {
         },
         error: (error) => {
           console.error(error);
+
+          // Mock user Jhon Doe
+          // const user: User = {
+          //   firstname: 'Jhon',
+          //   lastname: 'Doe',
+          //   docType: 'CC',
+          //   docNumber: '123456789',
+          //   email: 'jhon@doe.com',
+          //   role: 'admin',
+          //   phone: '123456789',
+          //   address: {
+          //     city: 'Medellin',
+          //     state: 'Antioquia',
+          //     street: 'Calle 123',
+          //     zip: '050022',
+          //   },
+          // };
+
+          // this.session.setUserSession(user);
         },
       });
     }
