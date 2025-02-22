@@ -4,15 +4,9 @@ import { Inject } from '@angular/core';
 
 export const SyncSessionGuard: CanActivateFn = (route, state) => {
   const session: SessionService = Inject(SessionService);
-
   const router = new Router();
 
   const userSession = session.sessionStatus;
 
-  if (userSession) {
-    return true;
-  } else {
-    router.navigate(['/login']);
-    return false;
-  }
+  return userSession ? true : router.navigate(['/login']);
 };

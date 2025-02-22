@@ -1,11 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment.development';
-
-interface Credentials {
-  username: string;
-  password: string;
-}
+import { Credentials } from '../../models/auth/Credentials';
 
 @Injectable({
   providedIn: 'root',
