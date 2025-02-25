@@ -1,36 +1,353 @@
-<aside class="w-full h-screen bg-gradient-to-b from-cyan-800 to-cyan-950">
-    <ul class="flex flex-col">
-        <li class="overflow-hidden"><a class="block px-5 py-3 w-full text-white transition duration-200 group hover:bg-red-400/80" [routerLink]="['/dashboard']">
-            <div class="flex gap-2 transition duration-200 group-hover:translate-x-8">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-template"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z" /><path d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M14 12l6 0" /><path d="M14 16l6 0" /><path d="M14 20l6 0" /></svg>
-                <span class="">
-                    Item
-                </span>
-            </div>
-        </a></li>
-        <li class="overflow-hidden"><a class="block px-5 py-3 w-full text-white transition duration-200 group hover:bg-green-400/30" [routerLink]="['/dashboard']">
-            <div class="flex gap-2 transition duration-200 group-hover:translate-x-8">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-template"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z" /><path d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M14 12l6 0" /><path d="M14 16l6 0" /><path d="M14 20l6 0" /></svg>
-                <span class="">
-                    Item
-                </span>
-            </div>
-        </a></li>
-        <li class="overflow-hidden"><a class="block px-5 py-3 w-full text-white transition duration-200 group hover:bg-blue-500/20" [routerLink]="['/dashboard']">
-            <div class="flex gap-2 transition duration-200 group-hover:translate-x-8">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-template"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z" /><path d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M14 12l6 0" /><path d="M14 16l6 0" /><path d="M14 20l6 0" /></svg>
-                <span class="">
-                    Item
-                </span>
-            </div>
-        </a></li>
-        <li class="overflow-hidden"><a class="block px-5 py-3 w-full text-white transition duration-200 group hover:bg-white/20" [routerLink]="['/dashboard']">
-            <div class="flex gap-2 transition duration-200 group-hover:translate-x-8">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-template"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z" /><path d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M14 12l6 0" /><path d="M14 16l6 0" /><path d="M14 20l6 0" /></svg>
-                <span class="">
-                    Item
-                </span>
-            </div>
-        </a></li>
-    </ul>
+<aside
+  class="flex flex-col w-full h-screen gap-3 bg-gradient-to-b from-cyan-800 to-cyan-950"
+>
+  <a
+    class="flex items-center justify-center w-full mx-auto my-4 font-semibold text-white transition duration-200 group hover:bg-white/10"
+    routerLink="/dashboard"
+  >
+    <img
+      src="assets/logo.png"
+      alt="logo"
+      class="object-cover w-1/4 transition -rotate-180 rounded-full group-hover:-translate-x-5 aspect-square group-hover:bg-clip-padding group-hover:scale-95 group-hover:p-2 group-hover:bg-red-500"
+    />
+    <span class="text-[55px] logo-text relative">
+      <span class="transition group-hover:opacity-0 group-hover:-z-20"
+        >IZY</span
+      >
+      <span
+        class="absolute left-0 transition opacity-0 group-hover:-translate-x-5 group-hover:opacity-100 group-hover:z-0 -z-10 group-hover:text-red-500"
+        >YSE</span
+      >
+      <span class="underline">van</span>!
+    </span>
+  </a>
+
+  <ul class="flex flex-col">
+    <li class="overflow-hidden">
+      <a
+        class="block w-full px-5 py-3 text-white transition duration-200 group hover:bg-red-400/80"
+        [routerLink]="['/dashboard']"
+      >
+        <div
+          class="flex gap-2 transition duration-200 group-hover:translate-x-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-template"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M14 12l6 0" />
+            <path d="M14 16l6 0" />
+            <path d="M14 20l6 0" />
+          </svg>
+          <span class="text-lgtext-Agencias"> Dashboard </span>
+        </div>
+      </a>
+    </li>
+    <li class="overflow-hidden">
+      <a
+        class="block w-full px-5 py-3 text-white transition duration-200 group hover:bg-green-400/30"
+        [routerLink]="['/dashboard']"
+      >
+        <div
+          class="flex gap-2 transition duration-200 group-hover:translate-x-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-template"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M14 12l6 0" />
+            <path d="M14 16l6 0" />
+            <path d="M14 20l6 0" />
+          </svg>
+          <span class="text-lg"> Agencias </span>
+        </div>
+      </a>
+    </li>
+    <li class="overflow-hidden">
+      <a
+        class="block w-full px-5 py-3 text-white transition duration-200 group hover:bg-blue-500/20"
+        [routerLink]="['/dashboard']"
+      >
+        <div
+          class="flex gap-2 transition duration-200 group-hover:translate-x-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-template"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M14 12l6 0" />
+            <path d="M14 16l6 0" />
+            <path d="M14 20l6 0" />
+          </svg>
+          <span class="text-lg"> Conductores </span>
+        </div>
+      </a>
+    </li>
+    <li class="overflow-hidden">
+      <a
+        class="block w-full px-5 py-3 text-white transition duration-200 group hover:bg-white/20"
+        [routerLink]="['/dashboard']"
+      >
+        <div
+          class="flex gap-2 transition duration-200 group-hover:translate-x-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-template"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M14 12l6 0" />
+            <path d="M14 16l6 0" />
+            <path d="M14 20l6 0" />
+          </svg>
+          <span class=""> Facturas </span>
+        </div>
+      </a>
+    </li>
+    <li class="overflow-hidden">
+      <a
+        class="block w-full px-5 py-3 text-white transition duration-200 group hover:bg-blue-500/20"
+        [routerLink]="['/dashboard']"
+      >
+        <div
+          class="flex gap-2 transition duration-200 group-hover:translate-x-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-template"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M14 12l6 0" />
+            <path d="M14 16l6 0" />
+            <path d="M14 20l6 0" />
+          </svg>
+          <span class="text-lg"> Historial </span>
+        </div>
+      </a>
+    </li>
+    <li class="overflow-hidden">
+      <a
+        class="block w-full px-5 py-3 text-white transition duration-200 group hover:bg-blue-500/20"
+        [routerLink]="['/dashboard']"
+      >
+        <div
+          class="flex gap-2 transition duration-200 group-hover:translate-x-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-template"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M14 12l6 0" />
+            <path d="M14 16l6 0" />
+            <path d="M14 20l6 0" />
+          </svg>
+          <span class="text-lg"> Servicios </span>
+        </div>
+      </a>
+    </li>
+    <li class="overflow-hidden">
+      <a
+        class="block w-full px-5 py-3 text-white transition duration-200 group hover:bg-blue-500/20"
+        [routerLink]="['/dashboard']"
+      >
+        <div
+          class="flex gap-2 transition duration-200 group-hover:translate-x-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-template"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M14 12l6 0" />
+            <path d="M14 16l6 0" />
+            <path d="M14 20l6 0" />
+          </svg>
+          <span class="text-lg"> Tarifas </span>
+        </div>
+      </a>
+    </li>
+    <li class="overflow-hidden">
+      <a
+        class="block w-full px-5 py-3 text-white transition duration-200 group hover:bg-blue-500/20"
+        [routerLink]="['/dashboard']"
+      >
+        <div
+          class="flex gap-2 transition duration-200 group-hover:translate-x-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-template"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M14 12l6 0" />
+            <path d="M14 16l6 0" />
+            <path d="M14 20l6 0" />
+          </svg>
+          <span class="text-lg"> Transacciones </span>
+        </div>
+      </a>
+    </li>
+    <li class="overflow-hidden">
+      <a
+        class="block w-full px-5 py-3 text-white transition duration-200 group hover:bg-blue-500/20"
+        [routerLink]="['/dashboard']"
+      >
+        <div
+          class="flex gap-2 transition duration-200 group-hover:translate-x-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-template"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M4 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M14 12l6 0" />
+            <path d="M14 16l6 0" />
+            <path d="M14 20l6 0" />
+          </svg>
+          <span class="text-lg"> Transportistas </span>
+        </div>
+      </a>
+    </li>
+  </ul>
 </aside>
+
+<style>
+  @font-face {
+    font-family: "Avenir";
+    src: url("assets/fonts/Avenir/AvenirLTProMedium.otf");
+  }
+
+  .logo-text {
+    font-family: "Avenir";
+  }
+</style>
